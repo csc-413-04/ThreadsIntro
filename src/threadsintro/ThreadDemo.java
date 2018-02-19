@@ -16,9 +16,9 @@ public class ThreadDemo extends Thread {
     // Create threads
     ThreadDemo printA = new ThreadDemo('a', 200);
     ThreadDemo printB = new ThreadDemo('b', 200);
-
-    printA.start();
     printB.start();
+    printA.start();
+
   }
 
   /**
