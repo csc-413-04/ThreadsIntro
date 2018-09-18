@@ -4,7 +4,7 @@ public class LocksDemo {
 
   private static int counter = 0;
   private static Object lock1 = new Object();
-  private static Object lock2 = new Object();
+  private static LocksDemo lock2 = new LocksDemo();
 
 
   static Runnable lockRunnable = new Runnable(){

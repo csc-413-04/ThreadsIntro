@@ -21,7 +21,7 @@ public class SynchronisedDemo {
 
     System.out.println(counter);
   }
-
+  // SynchronisedDemo.class
   public synchronized static void increment() {
     SynchronisedDemo.counter++;
   }

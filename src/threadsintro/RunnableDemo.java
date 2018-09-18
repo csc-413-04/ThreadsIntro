@@ -21,6 +21,8 @@ public class RunnableDemo implements Runnable {
 
     printA.start();
     printB.start();
+
+
   }
 
   public int something(int a, String r){
