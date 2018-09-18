@@ -4,8 +4,8 @@ package threadsintro;
 public class ThreadsSync {
 
   public static void main(String[] args) throws InterruptedException{
-    MyWorker worker1 = new MyWorker(2000000);
-    MyWorker worker2 = new MyWorker(2000000);
+    MyWorker worker1 = new MyWorker(200);
+    MyWorker worker2 = new MyWorker(200);
     Thread threadA = new Thread(worker1);
     Thread threadB = new Thread(worker2);
 
@@ -15,8 +15,13 @@ public class ThreadsSync {
     threadB.start();
     threadA.start();
 
-    threadA.join();
-    threadB.join();
+    try {
+      Thread.sleep(10);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+    //threadA.join();
+    //threadB.join();
 
     total = worker1.getCount() + worker2.getCount();
     System.out.println("Final total now is: " + total);
